@@ -1,5 +1,5 @@
 <?php
-$db_file = __DIR__ . '/stats.db';
+require_once __DIR__ . '/bootstrap.php';
 
 // 1. Get Pi-hole stats from pihole-FTL.db
 $pihole_db_path = '/etc/pihole/pihole-FTL.db';
@@ -28,9 +28,10 @@ try {
 $immich_photos = 0;
 $immich_videos = 0;
 $immich_url = "http://192.168.1.21:2283";
+$env = parse_ini_file(__DIR__ . '/.env');
 $login_payload = json_encode([
-    'email' => 'admin@ternis.net',
-    'password' => 'P4ssw0rd!'
+    'email' => $env['IMMICH_USER'],
+    'password' => $env['IMMICH_PASS']
 ]);
 
 $ch = curl_init($immich_url . '/api/auth/login');
@@ -66,14 +67,6 @@ if (isset($login_data['accessToken'])) {
 
 // 3. Update stats.db
 try {
-    $db = new PDO('sqlite:' . $db_file);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $db->exec("CREATE TABLE IF NOT EXISTS stats (
-        metric TEXT PRIMARY KEY,
-        value TEXT,
-        updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )");
     
     $updateStmt = $db->prepare("INSERT INTO stats (metric, value, updated_at) VALUES (:metric, :value, CURRENT_TIMESTAMP) ON CONFLICT(metric) DO UPDATE SET value=excluded.value, updated_at=excluded.updated_at");
     

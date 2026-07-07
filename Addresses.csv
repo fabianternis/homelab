@@ -5,4 +5,4 @@ addr, Hostname/name, type, use, model, IPv6 Address
 .23, mini3, mini-pc, NAT Gateway + Proxy + DNS + VPN, HP ProDesk 400 G2 Mini, 2a09:3f00:2004::1
 .50, Switch, Switch, Network Switch, TP-Link, 
 .70, TL-WA850RE, Access Point, WiFi Extender, TP-Link TL-WA850RE, 
-.123, MacBook, Laptop, Admin Client (Static IP), Apple MacBook Pro M4 Pro, 
+.123, MacBook, Laptop, Admin Client (Static IP), Apple MacBook Pro M4 Pro,
