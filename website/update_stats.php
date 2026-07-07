@@ -28,9 +28,10 @@ try {
 $immich_photos = 0;
 $immich_videos = 0;
 $immich_url = "http://192.168.1.21:2283";
+$env = parse_ini_file(__DIR__ . '/.env');
 $login_payload = json_encode([
-    'email' => 'admin@ternis.net',
-    'password' => 'REDACTED'
+    'email' => $env['IMMICH_USER'],
+    'password' => $env['IMMICH_PASS']
 ]);
 
 $ch = curl_init($immich_url . '/api/auth/login');
