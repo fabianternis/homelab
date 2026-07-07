@@ -1,0 +1,5 @@
+{
+  "summary": "A plan for subnetting an IPv6 /44 prefix and routing a /48 to a local LTE router.",
+  "updatedAt": "2026-07-07T15:27:20.821945900Z",
+  "userFacing": true
+}
