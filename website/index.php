@@ -24,11 +24,10 @@ $stats = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Ternis.net Dashboard</title>
 </head>
 <body>
-    <h1>Welcome to Ternis.net</h1>
-    <p>This is the homelab dashboard.</p>
+    <h1>ternis.net</h1>
     
     <h2>System Statistics</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
+    <table>
         <thead>
             <tr>
                 <th>Metric</th>
