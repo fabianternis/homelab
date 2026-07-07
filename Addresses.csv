@@ -1,0 +1,7 @@
+addr, Hostname/name , type , use , model
+.1 , , Router , main Gateway , Archer MR200
+.21 , mini1 , mini-pc , immich Host , HP ProDesk 600 G2 Mini
+.22 , mini2 , mini-pc , nextcloud+n8n Host , HP ProDesk 600 G2 Mini
+.23 , mini3 , mini-pc , Wireguard(Client + Host)+pi-hole Host , HP ProDesk 400 G2 Mini
+
+*...*
