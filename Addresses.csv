@@ -3,7 +3,7 @@ addr, Hostname/name , type , use , model
 .21 , mini1 , mini-pc , immich Host , HP ProDesk 600 G2 Mini
 .22 , mini2 , mini-pc , nextcloud+n8n Host , HP ProDesk 600 G2 Mini
 .23 , mini3 + pi.hole , mini-pc , Wireguard(Client + Host)+pi-hole Host , HP ProDesk 400 G2 Mini
-
-
+.101 , TL-WA850RE , Access Point , WiFi Extender , TP-Link TL-WA850RE
+.153 ,  , Switch , Network Switch , TP-Link
 
 *...*
