@@ -1,9 +1,9 @@
-addr, Hostname/name , type , use , model
-.1 , , Router , main Gateway , Archer MR200
-.21 , mini1, immich.ternis.net , mini-pc , immich Host , HP ProDesk 600 G2 Mini
-.22 , mini2 , mini-pc , nextcloud+n8n Host , HP ProDesk 600 G2 Mini
-.23 , mini3 + pi.hole , mini-pc , Wireguard(Client + Host)+pi-hole Host , HP ProDesk 400 G2 Mini
-.70 , TL-WA850RE , Access Point , WiFi Extender , TP-Link TL-WA850RE
-.50 ,  , Switch , Network Switch , TP-Link
+addr, Hostname/name , type , use , model, IPv6 Address
+.1 , , Router , main Gateway , Archer MR200, 
+.21 , mini1, immich.ternis.net , mini-pc , immich Host , HP ProDesk 600 G2 Mini, 2a09:3f00:2004::21 (static) / SLAAC
+.22 , mini2 , mini-pc , nextcloud+n8n Host , HP ProDesk 600 G2 Mini, 2a09:3f00:2004::22 (static) / SLAAC
+.23 , mini3 + pi.hole , mini-pc , Wireguard(Client + Host)+pi-hole Host , HP ProDesk 400 G2 Mini, 2a09:3f00:2004::1
+.70 , TL-WA850RE , Access Point , WiFi Extender , TP-Link TL-WA850RE, 
+.50 ,  , Switch , Network Switch , TP-Link, 
 
 *...*
